@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+*.pdb
+/SoW_tetris_CLI/MS/VS17/x64*
+*.vs
+/SoW_tetris_CLI/MS/VS17/SoW_tetris_CLI/x64
