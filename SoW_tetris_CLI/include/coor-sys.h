@@ -10,4 +10,8 @@ namespace tlib {
 		Pos2D() { this->x = 0; this->y = 0; }
 	};
 
+	class World{
+		
+	}
+
 }
