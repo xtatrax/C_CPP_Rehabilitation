@@ -4,7 +4,9 @@
 
 
 
-
+// linux  CSI beep
+// ESC [ 10 ; (hz) ]
+// ESC [ 11 ; (msec) ]
 
 void main_loop() {
 	display_cls();
