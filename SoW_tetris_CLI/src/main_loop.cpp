@@ -4,7 +4,9 @@
 #include <string>
 
 
-
+// linux  CSI beep
+// ESC [ 10 ; (hz) ]
+// ESC [ 11 ; (msec) ]
 
 void main_loop() {
 	std::string str="　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　¥n";
