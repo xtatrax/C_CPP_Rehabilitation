@@ -11,7 +11,7 @@ namespace tlib {
 	};
 
 	class World{
-		
-	}
+		int x;
+	};
 
 }

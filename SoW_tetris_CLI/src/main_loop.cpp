@@ -1,12 +1,24 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "../include/system.h"
-
+#include <string>
 
 
 
 
 void main_loop() {
+	std::string str="　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　¥n";
+	/*
+	for(char i =0 ; i < 101 ; i++){
+		for(char j = 0 ; j < 50 ; j++){
+			char ch = "";
+			if( i == 100){
+				
+			}
+			field[i][j]
+		}
+	}
+	*/
 	display_cls();
 
 	sleep(5);
