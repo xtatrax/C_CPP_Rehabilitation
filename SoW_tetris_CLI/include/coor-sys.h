@@ -2,7 +2,7 @@
 #pragma ones
 
 namespace tlib {
-	typedef const struct Pos2D {
+	typedef struct Pos2D {
 		int x;
 		int y;
 		Pos2D(int x, int y) { this->x = x; this->y = y; }
