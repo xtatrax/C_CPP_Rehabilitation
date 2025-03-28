@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"*.am": "makefile",
+		"iostream": "cpp",
+		"string": "cpp"
+	}
+}
