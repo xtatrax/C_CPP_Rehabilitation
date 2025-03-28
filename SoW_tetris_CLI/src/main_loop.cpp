@@ -7,6 +7,14 @@
 // linux  CSI beep
 // ESC [ 10 ; (hz) ]
 // ESC [ 11 ; (msec) ]
+// isFlameUpdate(int fps){
+//    static prv_time = getTime();
+//    f=1/fps;
+//    now_time=getTime();
+//    if( f>(prv_time - now_time)){
+//        return true;
+//    }
+//    return false;
 
 void main_loop() {
 	std::string str="　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　¥n";
