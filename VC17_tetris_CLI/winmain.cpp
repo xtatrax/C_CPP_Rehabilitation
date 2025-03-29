@@ -2,11 +2,25 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <locale.h>
+#include <string>
 #include "main_loop.h"
 int main() {
     setlocale(LC_ALL, "ja_JP.Utf-8");
+    //printf("\e[8;100;100t\n");
 
-    if ( true ) {
+
+    if (false) {
+        std::wstring test = L"１２３４５６７８９";
+
+        std::wstring test2 = L"●□■◆";
+
+        wprintf(L"%s \n", test.c_str());
+        wprintf(L"%s \n", test2.c_str());
+        test.replace(3, test2.length(), test2);
+        wprintf(L"%s \n", test.c_str());
+
+        system("help");
+    } else {
         constexpr CONSOLE_CURSOR_INFO cursor{ 1, FALSE };
 
         CONSOLE_CURSOR_INFO init;
@@ -22,4 +36,5 @@ int main() {
 
         SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &init); // カーソルの状態を元に戻す。
     }
+    getchar();
 }

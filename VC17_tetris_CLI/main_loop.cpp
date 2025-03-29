@@ -32,17 +32,54 @@ public:
 	}
 	
 };
+class Field {
 
+public:
+    std::vector<std::wstring> m_vFieldStr;
+    std::vector<std::wstring> m_vBlocksStr;
+    int m_iX;
+    int m_iY;
+    int m_iW;
+    int m_iH;
+    Field() {
+        int m_iX = 0;
+        int m_iY = 0;
+        int m_iW = 0;
+        int m_iH = 0;
+    }
+    void init(int i_ix, int i_iy, int i_iw, int i_ih) {
+        this->m_iX = i_ix;
+        this->m_iY = i_iy;
+        this->m_iW = i_iw;
+        this->m_iH = i_ih;
+        for (char i = 0; i < i_ih; i++) {
+            std::wstring str;
+            for (char j = 0; j < i_iw; j++) {
+                wchar_t c = L'■';
+                if (j == 0 || j == i_iw || i == i_iw) {
+                    str.append(L"■");
+                }
+                else {
+                    str.append(L"　");
+                }
+            }
+            m_vFieldStr.push_back(str);
+        }
+    }
+
+};
 class World{
 	std::vector<std::wstring> m_vWorldStr;
 	std::wstring m_sDrawFlame;
 	int m_iW;
 	int m_iH;
-	Block m_testBlock;
+	Block m_nowBlock;
+    Field m_Field;
 public:
 	void init(int i_iw, int i_ih) {
 		this->m_iW = i_iw;
 		this->m_iH = i_ih;
+        m_Field.init((i_iw/2) -(10/2), (i_ih / 2) - (20 / 2), 10, 20);
 		for (char i = this->m_iH; i > 0; i--) {
 			std::wstring strline;
 			for (char j = this->m_iW; j > 0; j--) {
@@ -58,28 +95,28 @@ public:
 		switch (c)
 		{
 			case 'w':
-				m_testBlock.m_iY--;
-				if (m_testBlock.m_iY < 0) {
-					m_testBlock.m_iY = 0;
+                m_nowBlock.m_iY--;
+				if (m_nowBlock.m_iY < 0) {
+                    m_nowBlock.m_iY = 0;
 				}
 
 				break;
 			case 'a':
-				m_testBlock.m_iX--;
-				if (m_testBlock.m_iX < 0) {
-					m_testBlock.m_iX = 0;
+                m_nowBlock.m_iX--;
+				if (m_nowBlock.m_iX < 0) {
+                    m_nowBlock.m_iX = 0;
 				}
 				break;
 			case 's':
-				m_testBlock.m_iY++;
-				if (m_testBlock.m_iY > this->m_iH-1) {
-					m_testBlock.m_iY = this->m_iH-2;
+                m_nowBlock.m_iY++;
+				if (m_nowBlock.m_iY > this->m_iH-1) {
+                    m_nowBlock.m_iY = this->m_iH-2;
 				}
 				break;
 			case 'd':
-				m_testBlock.m_iX++;
-				if (m_testBlock.m_iX > this->m_iW-1) {
-					m_testBlock.m_iX = this->m_iW-2;
+                m_nowBlock.m_iX++;
+				if (m_nowBlock.m_iX > this->m_iW-1) {
+                    m_nowBlock.m_iX = this->m_iW-2;
 				}
 				break;
 			case 0x1b:
@@ -88,7 +125,7 @@ public:
 			default:
 				break;
 		}
-		m_vWorldStr[m_testBlock.m_iY][(m_testBlock.m_iX)] = m_testBlock.m_vBlockStr[0][0];
+		m_vWorldStr[m_nowBlock.m_iY][(m_nowBlock.m_iX)] = m_nowBlock.m_vBlockStr[0][0];
 
 		m_sDrawFlame.clear();
 		for (char i = 0; i < this->m_iH; i++) {
