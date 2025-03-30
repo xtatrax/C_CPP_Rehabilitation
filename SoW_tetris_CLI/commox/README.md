@@ -1,0 +1,1 @@
+# Unix Linux 系 共通実装

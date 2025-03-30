@@ -2,6 +2,7 @@
 	"files.associations": {
 		"*.am": "makefile",
 		"iostream": "cpp",
-		"string": "cpp"
+		"string": "cpp",
+		"chrono": "cpp"
 	}
 }

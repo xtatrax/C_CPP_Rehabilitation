@@ -17,6 +17,12 @@ int main() {
     auto dur = end - start;        // 要した時間を計算
     auto msec = std::chrono::duration_cast<std::chrono::milliseconds>(dur).count();
     printf("msec (%f)",(float)msec/1000);
+
+	display_cls();
+
+	sleep(5);
+	display_resize(50, 50);
+
 	getchar();
 	return 0;
 

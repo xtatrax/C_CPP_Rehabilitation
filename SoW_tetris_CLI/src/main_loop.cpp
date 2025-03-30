@@ -2,8 +2,10 @@
 #include <unistd.h>
 #include "../include/system.h"
 #include <string>
-
-
+#include <chrono>
+#include <thread>
+#include <vector>
+using namespace std::chrono ;
 // linux  CSI beep
 // ESC [ 10 ; (hz) ]
 // ESC [ 11 ; (msec) ]
@@ -15,6 +17,33 @@
 //        return true;
 //    }
 //    return false;
+
+
+
+bool isFrameUpdate(char fps) {
+	static int count = 0;
+	static system_clock::time_point prev = system_clock::now();
+	static system_clock::time_point prev_sec = system_clock::now();
+	
+	// 現在時間
+	system_clock::time_point now = system_clock::now();
+	system_clock::duration dur = now - prev_sec;        // 要した時間を計算
+	long long msec1 = duration_cast<milliseconds>(dur).count();
+	if (1.0f < ((float)msec1 / 1000)) {
+		//system("cls");
+		//printf("%d fps\n", count);
+		count = 0;
+		prev_sec = now;
+	}
+	dur = now - prev;        // 要した時間を計算
+	long long msec = duration_cast<milliseconds>(dur).count();
+	if ((1.0f / fps) < ((float)msec / 1000)) {
+		count++;
+		prev = now;
+		return 1;
+	}
+	return 0;
+}
 
 void main_loop() {
 	std::string str="　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　¥n";
@@ -29,14 +58,15 @@ void main_loop() {
 		}
 	}
 	*/
-	display_cls();
-
-	sleep(5);
-	display_resize(50, 50);
 
 	bool is_loop = false;
 	do{
-		
-		sleep(1);
+		if (isFrameUpdate(15)) {
+			printf("\033[0;0f");
+			//world.update();
+			//world.draw();
+		}
+		std::this_thread::sleep_for(microseconds(10));
+
 	}while(is_loop);
 }

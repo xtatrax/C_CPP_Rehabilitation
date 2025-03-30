@@ -5,19 +5,21 @@ DEST		= dst/
 #LDFLAGS	= -L/usr/local/lib
 LDFLAGS		= -L/usr/lib
 LIBS		= #-lm -l
-OBJS		= src/main.o
+OBJS		= src/main.o commox/sys.o
 PROGRAM		= tetris.exe
 #SRCDIR		= src/
-WINOBJ		= 
-DARWINOBJ	= Darwin/macsys.o
+MINGWOBJ	= 
+DARWINOBJ	= 
 
-ifeq ($(os),Windows_NT)
-# Windows stuff
+ifeq ($(OS),Windows_NT)
+# Windows + MinGW ということにする
+	OBJS += $(MINGWOBJ)
+#	LDFLAGS += -static -lstdc++ -lgcc -lwinpthread
 #	PROGRAM = tetris.exe
 #	OBJS = src/main.o
 else
 	ifeq ($(uname),Darwin)
-		OBJS := DARWINOBJ
+		OBJS += $(DARWINOBJ)
 	else
 	endif
 endif
@@ -28,7 +30,7 @@ $(PROGRAM):		$(OBJS)
 #				@echo hello $(os)
 				$(CC) $(OBJS) $(LDFLAGS) $(LIBS) -o $(PROGRAM)
 
-clean:;			rm -f *.o *~ $(PROGRAM)
+clean:;			find . -name "*.o" -o -name "*~" -o -name "$(PROGRAM)" | xargs rm
 
 install:		$(PROGRAM)
 				install -s $(PROGRAM) $(DEST)
