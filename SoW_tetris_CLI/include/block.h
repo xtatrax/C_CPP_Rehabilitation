@@ -1,7 +1,5 @@
 // ブロック
 
-struct BlockStatus{};
-
 class Block{
     // 実態
     //
