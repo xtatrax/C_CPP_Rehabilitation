@@ -1,15 +1,20 @@
 // TextCell
 
-union TextCellstatus{
+union TextCellStatus{
     char status;
     bool isLock : 1;
     char type :4;
     char color: 3;
 };
-enum Type{
+enum TCType{
     // max 16
+	empty = 0b0000,
+	block,
+	wall,
+	tine,
+	score,
 };
-enum Color{
+enum TCColor{
     // max 7
     Default = 0b000,
     R = 0b001,
@@ -19,5 +24,7 @@ enum Color{
     M = 0b101,
     Y = 0b110,
     gray = 0b111
-
+};
+struct TextColor{
+	
 };
