@@ -47,6 +47,7 @@ Release
 ipch
 *sdf
 *.user
-/SoW_tetris_CLI/path.txt
+SoW_tetris_CLI/path.txt
+SoW_tetris_CLI/tetris
 .vscode/c_cpp_properties.json
-.vscode/tasks.json
+.vscode/tasks.
