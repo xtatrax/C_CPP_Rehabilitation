@@ -1,3 +1,6 @@
 [submodule "PastSauce/oldPrj-SchoolTask_BomberProject-public"]
 	path = PastSauce/oldPrj-SchoolTask_BomberProject-public
 	url = git@github.com:xtatrax/oldPrj-SchoolTask_BomberProject-public.git
+[submodule "PastSauce/oldPrj-SchoolTask-M.L.P"]
+	path = PastSauce/oldPrj-SchoolTask-M.L.P
+	url = git@github.com:xtatrax/oldPrj-SchoolTask-M.L.P.git
