@@ -22,15 +22,15 @@ int main() {
 		display_cls();
 
 		sleep(5);
+		const char* teststr = "abcd";
+		printf("test1 %s (%X)\n",teststr,teststr);
+		//(*(teststr+1))=1;
+		printf("test2 %s (%X)\n",teststr,teststr);
+		(char&)(*teststr) = '0';
+		printf("test3 %s (%X)\n",teststr,teststr);
 	}
 	display_resize(50, 50);
-	const char* teststr = "abcd";
-	printf("test1 %s (%X)\n",teststr,teststr);
-	//(*(teststr+1))=1;
-	printf("test2 %s (%X)\n",teststr,teststr);
-	(char&)(*teststr) = '0';
-	printf("test3 %s (%X)\n",teststr,teststr);
-
+	
 	getchar();
 	return 0;
 

@@ -9,7 +9,7 @@
 //
 #include "../include/coor-sys.h"
 
-namespace tlib {
+namespace tlibcap {
 	void World::init(int w, int h) {
 		this->w = w;
 		this->h = h;
