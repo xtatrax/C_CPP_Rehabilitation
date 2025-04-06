@@ -1,0 +1,19 @@
+/////////////////////////////////////////////////////////////////////////////////
+// File:	prog_main.cpp
+// charset:	UTF-8
+// Project:	SoW_tetris_CLI
+// Author:	xtatrax
+// Date:	2025/03/01
+// Copyright (c) 2025 xtatrax
+// All rights reserved.
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+#include "../include/prog_main.h"
+
+
+int main_loop(){
+	
+	return 0;
+}
