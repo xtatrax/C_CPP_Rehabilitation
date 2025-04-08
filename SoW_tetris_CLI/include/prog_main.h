@@ -10,4 +10,6 @@
 
 #pragma once
 
+bool is_done=false;
+
 int main_loop();

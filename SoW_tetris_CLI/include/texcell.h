@@ -38,7 +38,7 @@ enum TCType{
 	status = 0b100,
 	mask   = 0b111,
 };
-enum WallType{
+enum FlameType{
 	// max 15
 	Default   = 0b0000,
 	TL   = 0b0001, // ┏
@@ -70,7 +70,7 @@ struct StatusPacket{
 };
 struct Texcell{
 	// 文字列の定数化これでいいんだっけ？。。。
-	inline static const wchar_t *Default    = L"\e[0m　"       ; // 空白
+	inline static const wchar_t *Default    = L"　"           ; // 空白
 	inline static const wchar_t *I          = L"\e[36m■\e[0m" ; // Cyan
 	inline static const wchar_t *O          = L"\e[93m■\e[0m" ; // Bright Yellow
 	inline static const wchar_t *T          = L"\e[95m■\e[0m" ; // Bright Magenta
@@ -79,6 +79,12 @@ struct Texcell{
 	inline static const wchar_t *S1         = L"\e[91m■\e[0m" ; // Bright Red
 	inline static const wchar_t *S2         = L"\e[31m■\e[0m" ; // Red
 	inline static const wchar_t *Wall       = L"\e[0m■\e[0m"  ; // 壁
+	inline static const wchar_t *Flame_TL   = L"┌"            ; // 壁
+	inline static const wchar_t *Flame_H    = L"─"  ; // 壁
+	inline static const wchar_t *Flame_TR   = L"┐"  ; // 壁
+	inline static const wchar_t *Flame_V    = L"│"  ; // 壁
+	inline static const wchar_t *Flame_BL   = L"└"  ; // 壁
+	inline static const wchar_t *Flame_BR   = L"┘"  ; // 壁
 	inline static const wchar_t *TimeTitle  = L"\e[0mTime\e[0m"; // タイムタイトル
 	inline static const wchar_t *Time       = L"\e[0m%02d:%02d:%02d\e[0m"  ; // タイム
 	inline static const wchar_t *ScoreTitle = L"\e[0mScore \e[0m"; // スコアタイトル
@@ -121,7 +127,7 @@ struct Texcell{
 			case TCType::wall:
 				return Wall;
 				break;
-			// 以下修正知る
+			/*/ 以下修正知る
 			case TCType::time_title:
 				return TimeTitle;
 				break;
@@ -134,6 +140,7 @@ struct Texcell{
 			case TCType::score:
 				return Score;
 				break;
+				/**/
 			default:
 				return Default;
 				break;

@@ -15,5 +15,9 @@
 
 int main_loop(){
 	
+	do {
+		
+	}while(!is_done);
+
 	return 0;
 }
