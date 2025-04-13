@@ -1,7 +1,11 @@
 // 元ソース : https://w.atwiki.jp/yosilove/pages/16.html
 
-#include <OpenAL/al.h>
-#include <OpenAL/alc.h>
+#include <al/al.h>
+#include <al/alc.h>
+//#include <OpenAL/al.h>
+//#include <OpenAL/alc.h>
+//#include <al.h>
+//#include <alc.h>
 #include <math.h>
 #include <stdio.h>
 #include <unistd.h>//sleep関数用

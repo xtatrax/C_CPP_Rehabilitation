@@ -19,6 +19,7 @@ namespace tlibcap{
 		for(int i = 0; i < size.height; ++i){
 			m_cells[i].resize(size.width);
 			for(int j = 0; j < size.width; ++j){
+				if( i == 0 )
 				m_cells[i][j].status = 0;
 			}
 		}
