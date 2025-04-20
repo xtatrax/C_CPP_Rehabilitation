@@ -9,7 +9,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-namespace tlibcap
+namespace tlibccp
 {
 	struct Size ;
 	struct Point{
@@ -188,4 +188,4 @@ namespace tlibcap
 	inline Point& Point::operator/=(const Point& other) throw() { x /= other.x; y /= other.y; return *this; }
 	inline Point& Point::operator/=(const Size& other)  throw() { x /= other.width; y /= other.height; return *this; }
 	inline Point& Point::operator/=(int value)          throw() { x /= value; y /= value; return *this; }
-} // namespace tlibcap
+} // namespace tlibccp

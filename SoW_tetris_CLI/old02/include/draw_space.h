@@ -14,7 +14,7 @@
 #include <string>
 #include "coor_sys.h"
 #include "texcell.h"
-namespace tlibcap{
+namespace tlibccp{
 	//typedef std::vector<std::wstring> Texcell_t;
 
 	// 操作方法
@@ -104,4 +104,4 @@ namespace tlibcap{
 			void update();
 			~World();
 	};
-} // namespace tlibcap
+} // namespace tlibccp

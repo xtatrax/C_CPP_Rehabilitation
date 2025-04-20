@@ -10,7 +10,7 @@
 #pragma ones
 #include <string>
 #include <vector>
-namespace tlibcap {
+namespace tlibccp {
 	struct Pos2D {
 		int x;
 		int y;

@@ -10,7 +10,7 @@
 
 
 #include "coor-sys.h"
-namespace tlibcap{
+namespace tlibccp{
 	typedef std::vector<std::wstring> Texcell_t;
 	typedef std::vector<std::vector<char>> CallsState_t;
 	class Block {

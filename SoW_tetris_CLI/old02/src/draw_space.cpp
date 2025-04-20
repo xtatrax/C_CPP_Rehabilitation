@@ -11,7 +11,7 @@
 #include "../include/draw_space.h"
 
 
-namespace tlibcap{
+namespace tlibccp{
 
 	TetrisField::TetrisField(const Size& size, const Point& pos)
 	: Field(Size(size.height+1,size.width+2) , pos){
@@ -64,4 +64,4 @@ namespace tlibcap{
 		}
 		World::calcTexcell();
 	}
-} // namespace tlibcap
+} // namespace tlibccp
