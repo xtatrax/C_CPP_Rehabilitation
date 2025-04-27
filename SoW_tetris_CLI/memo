@@ -1,0 +1,21 @@
+D:\00_dev\env\msys64>DIR /S /B include
+D:\00_dev\env\msys64\clang32\include
+D:\00_dev\env\msys64\clang64\include
+D:\00_dev\env\msys64\clangarm64\include
+D:\00_dev\env\msys64\home\tatra\Python-3.12.7\Include
+D:\00_dev\env\msys64\home\tatra\Python-3.12.7\Modules\_hacl\include
+D:\00_dev\env\msys64\mingw32\include
+D:\00_dev\env\msys64\mingw64\include
+D:\00_dev\env\msys64\mingw64\lib\gcc\x86_64-w64-mingw32\14.2.0\include
+D:\00_dev\env\msys64\mingw64\lib\gcc\x86_64-w64-mingw32\14.2.0\install-tools\include
+D:\00_dev\env\msys64\mingw64\lib\gcc\x86_64-w64-mingw32\14.2.0\plugin\include
+D:\00_dev\env\msys64\mingw64\share\cmake\include
+D:\00_dev\env\msys64\mingw64\share\cmake\Help\include
+D:\00_dev\env\msys64\ucrt64\include
+D:\00_dev\env\msys64\ucrt64\lib\gcc\x86_64-w64-mingw32\14.2.0\include
+D:\00_dev\env\msys64\ucrt64\lib\gcc\x86_64-w64-mingw32\14.2.0\install-tools\include
+D:\00_dev\env\msys64\ucrt64\lib\gcc\x86_64-w64-mingw32\14.2.0\plugin\include
+D:\00_dev\env\msys64\usr\include
+D:\00_dev\env\msys64\usr\lib\clang\11.0.0\include
+D:\00_dev\env\msys64\usr\lib\gcc\x86_64-pc-msys\13.3.0\include
+D:\00_dev\env\msys64\usr\lib\gcc\x86_64-pc-msys\13.3.0\install-tools\include

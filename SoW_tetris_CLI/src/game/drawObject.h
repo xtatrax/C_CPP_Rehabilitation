@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-// File:	main_mingw64.cpp
+// File:	drawObject.h
 // charset:	UTF-8
 // Project:	SoW_tetris_CLI
 // Author:	xtatrax
@@ -7,9 +7,17 @@
 // Copyright (c) 2025 xtatrax
 // All rights reserved.
 ///////////////////////////////////////////////////////////////////////////////
+#include <vector>
+#include <string>
 
-
-int main(int argc, char* argv[]) {
-
-	return 0;
-}
+namespace tlibccp
+{
+	class DrawObject{
+		protected:
+			int m_width;
+			int m_height;
+			int m_x;
+			int m_y;
+			std::vector<std::vector<std::string>> m_ScreenBuffer;
+	};
+} // namespace tlibccp

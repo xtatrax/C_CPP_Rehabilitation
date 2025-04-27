@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-// File:	main_mingw64.cpp
+// File:	main_screen
 // charset:	UTF-8
 // Project:	SoW_tetris_CLI
 // Author:	xtatrax
@@ -8,8 +8,16 @@
 // All rights reserved.
 ///////////////////////////////////////////////////////////////////////////////
 
+#include "scene_base.h"
 
-int main(int argc, char* argv[]) {
-
-	return 0;
-}
+namespace tlibccp {
+	namespace tetris {
+		class MainScene : public SceneBase {
+			public:
+				MainScene();
+				~MainScene();
+				void update() override;
+				void draw() override;
+		}; // class Scene
+	} // namespace tetris
+} // namespace tlibccp

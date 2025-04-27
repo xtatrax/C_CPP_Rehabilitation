@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
-// File:	scene_base.h
+// File:	main_screen.cpp
 // charset:	UTF-8
 // Project:	SoW_tetris_CLI
 // Author:	xtatrax
@@ -9,16 +9,20 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-
+#include "main_screen.h"
 
 namespace tlibccp {
 	namespace tetris {
-		class SceneBase {
-			public:
-				SceneBase();
-				virtual ~SceneBase();
-				virtual void update() = 0;
-				virtual void draw() = 0;
-		}; // class SceneBase
+		MainScene::MainScene() {}
+		MainScene::~MainScene() {}
+		
+		void MainScene::update() {
+			// Update the main scene
+		}
+		
+		void MainScene::draw() {
+			// Draw the main scene
+		}
+		
 	} // namespace tetris
 } // namespace tlibccp
